@@ -1,0 +1,16 @@
+<h1>Create New Appearance</h1>
+
+<h1> Create a new Appearance </h1>
+ <%= form_tag '/appearances' do %>
+ <h3><%= label_tag :episode_number %></h3>
+ <h3><%= number_field_tag :episode_number %></h3>
+ <h3><%= label_tag :episode_date %></h3>
+ <h3><%= date_field_tag :episode_date %></h3>
+ <br></br>
+ <h3><%= label_tag :guest_name %></h3>
+ <h3><%= text_field_tag :guest_name %></h3>
+ <h3><%= label_tag :guest_occupation %></h3>
+ <h3><%= text_field_tag :guest_occupation %></h3>
+ <br></br>
+ <h3><%= submit_tag "Create Appearance" %></h3>
+ <%end%>

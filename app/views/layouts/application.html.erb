@@ -9,6 +9,16 @@
   </head>
 
   <body>
+        <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "flash#{name}" %>
+        <% end %>
+
+    <%= form_tag log_in_path do %>
+    <%= text_field_tag :username %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Log In" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
